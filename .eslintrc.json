@@ -10,10 +10,12 @@
     "sourceType": "module"
   },
   "plugins": [
+    "prettier",
     "@typescript-eslint",
     "jest"
   ],
   "extends": [
+    "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -21,5 +23,13 @@
     "prettier",
     "prettier/@typescript-eslint"
   ],
-  "rules": {}
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false
+      }
+    ]
+  }
 }
