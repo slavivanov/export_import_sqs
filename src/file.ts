@@ -1,7 +1,9 @@
 import fs from "fs";
 
 export const removeFile = (path: string) => {
-  fs.unlinkSync(path);
+  try {
+    fs.unlinkSync(path);
+  } catch (e) {}
 };
 
 export const appendToJSONFile = (path: string, content: string) => {
